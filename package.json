@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "celebrate": "^12.0.1",
+    "cool-ascii-faces": "^1.3.4",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "jest": "^25.2.4",

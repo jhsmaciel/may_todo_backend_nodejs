@@ -1,7 +1,10 @@
 const express = require("express")
+const cool = require('cool-ascii-faces')
+
 const { celebrate, Joi, Segments } = require('celebrate')
 
 const { createTarefa, deleteTarefa, getTarefas, updateTarefa } = require("./controllers/TarefasController")
+
 
 const statusEnum = {
     TODO: "TODO",
@@ -47,5 +50,7 @@ routes.put('/tarefas/:id', celebrate({
         status: Joi.equal(statusEnum.DOING, statusEnum.DONE, statusEnum.TODO).required(),
     }),
 }), updateTarefa )
+
+routes.get('/cool', (req, res) => res.send(cool()))
 
 module.exports = routes;
